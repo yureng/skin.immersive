@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">98</defaultcontrol>
+	
+	<controls>
+
+		<include>Common_Settings_Background</include>
+
+		<!--Menu-->
+		<control type="group">
+
+			<include>Common_Settings_Header_Back</include>
+
+			<control type="label">
+
+				<include>Common_Settings_Header</include>
+				<label>$LOCALIZE[20077]</label>
+
+			</control>
+
+			<control type="list" id="98">
+
+				<description>List</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>420</width>
+				<height max="600">auto</height>
+				<onup>98</onup>
+				<ondown>98</ondown>
+				<onleft></onleft>
+				<onright>99</onright>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol></pagecontrol>
+
+				<include>Common_Settings_Menu_List</include>
+
+				<content>
+
+					<item id="3">
+						<description>Backgrounds</description>
+						<label>$LOCALIZE[33069]</label>
+						<onclick></onclick>
+					</item>
+
+					<item id="4">
+						<description>Visuals</description>
+						<label>$LOCALIZE[250]</label>
+						<onclick></onclick>
+					</item>
+
+				</content>
+
+			</control>
+
+		</control>
+
+		<!--Controls-->
+		<control type="group" id="99">
+
+			<include>Common_Settings_Group</include>
+
+			<!--Background Options-->
+			<control type="grouplist" id="300">
+
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>98</onleft>
+				<onright></onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>83</pagecontrol>
+				<visible>Container(98).Hasfocus(3)</visible>
+
+				<include>Common_Animation_Settings_Options</include>
+
+				<control type="label" id="352">
+
+					<include>Common_Settings_Label</include>
+					<label>Personalization</label>
+
+				</control>
+
+				<control type="panel" id="301">
+
+					<width>730</width>
+					<height>120</height>
+					<orientation>horizontal</orientation>
+
+					<itemlayout width="123" height="120">
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture>colors/color_black.png</texture>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>Background_Dark</colordiffuse>
+							<visible>Skin.HasSetting(UseColorBackground_Home)</visible>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<visible>!Skin.HasSetting(UseColorDiffuseBackground_Home)</visible>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<colordiffuse>Background_Normal</colordiffuse>
+							<visible>Skin.HasSetting(UseColorDiffuseBackground_Home)</visible>
+
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="123" height="120">
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture>colors/color_black.png</texture>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>Background_Dark</colordiffuse>
+							<visible>Skin.HasSetting(UseColorBackground_Home)</visible>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<visible>!Skin.HasSetting(UseColorDiffuseBackground_Home)</visible>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<colordiffuse>Background_Normal</colordiffuse>
+							<visible>Skin.HasSetting(UseColorDiffuseBackground_Home)</visible>
+
+						</control>
+
+						<control type="image">
+
+							<include>Common_Settings_Preview_Selection</include>
+							<texture border="10">list_focus.png</texture>
+							<colordiffuse>Background_Highlight</colordiffuse>
+
+						</control>
+
+					</focusedlayout>
+
+					<content>
+
+						<item id="1">
+							<onclick>Skin.Reset(PersonalizeOverlay)</onclick>
+							<onclick>ActivateWindow(52)</onclick>
+							<icon>colors/color_black.png</icon>
+							<thumb>colors/color_black.png</thumb>
+							<label>Default</label>
+						</item>
+
+						<item id="2">
+							<onclick>Skin.SetString(PersonalizeOverlay,Circles)</onclick>
+							<onclick>ActivateWindow(52)</onclick>
+							<icon>settings/settings_preview_circles.png</icon>
+							<thumb>personalization/personalization_circles.png</thumb>
+							<label>Circles</label>
+						</item>
+
+						<item id="3">
+							<onclick>Skin.SetString(PersonalizeOverlay,Mountains)</onclick>
+							<onclick>ActivateWindow(52)</onclick>
+							<icon>settings/settings_preview_mountains.png</icon>
+							<thumb>personalization/personalization_mountains.png</thumb>
+							<label>Mountains</label>
+						</item>
+
+						<item id="4">
+							<onclick>Skin.SetString(PersonalizeOverlay,City)</onclick>
+							<onclick>ActivateWindow(52)</onclick>
+							<icon>settings/settings_preview_city.png</icon>
+							<thumb>personalization/personalization_city.png</thumb>
+							<label>City</label>
+						</item>
+
+						<item id="5">
+							<onclick>Skin.SetString(PersonalizeOverlay,Cubist)</onclick>
+							<onclick>ActivateWindow(52)</onclick>
+							<icon>settings/settings_preview_cubist.png</icon>
+							<thumb>personalization/personalization_cubist.png</thumb>
+							<label>Cubist</label>
+						</item>
+
+						<item id="6">
+							<onclick>Skin.SetImage(PersonalizationOverlayCustom)</onclick>
+							<onclick condition="!String.IsEmpty(Skin.String(PersonalizationOverlayCustom))">Skin.SetString(PersonalizeOverlay,Custom)</onclick>
+							<onclick>ActivateWindow(52)</onclick>
+							<icon>settings/settings_preview_cubist.png</icon>
+							<thumb>$INFO[Skin.String(PersonalizationOverlayCustom)]</thumb>
+							<label>Custom...</label>
+						</item>
+
+					</content>
+
+				</control>
+
+				<control type="label" id="353">
+
+					<textcolor>Settings_Label</textcolor>
+					<include>Common_Settings_Label_Small</include>
+					<label>$INFO[Container(301).ListItem.Label]</label>
+
+				</control>
+
+				<control type="label" id="355">
+
+					<include>Common_Settings_Label</include>
+					<label>Colour options</label>
+
+				</control>
+
+				<control type="radiobutton" id="304">
+
+					<description>Color Background</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Use theme colour for background</label>
+					<onclick>Skin.ToggleSetting(UseColorBackground_Home)</onclick>
+					<selected>Skin.HasSetting(UseColorBackground_Home)</selected>
+
+				</control>
+
+				<control type="radiobutton" id="305">
+
+					<description>Color Background</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Use colour diffuse on image</label>
+					<onclick>Skin.ToggleSetting(UseColorDiffuseBackground_Home)</onclick>
+					<selected>Skin.HasSetting(UseColorDiffuseBackground_Home)</selected>
+
+				</control>
+
+			</control>
+
+			<!--Visualisation Options-->
+			<control type="grouplist" id="400">
+
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onup>400</onup>
+				<ondown>400</ondown>
+				<onleft>98</onleft>
+				<onright></onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>84</pagecontrol>
+				<visible>Container(98).Hasfocus(4)</visible>
+
+				<include>Common_Animation_Settings_Options</include>
+
+				<control type="label" id="453">
+
+					<include>Common_Settings_Label</include>
+					<label>Media views</label>
+
+				</control>
+
+				<control type="radiobutton" id="406">
+
+					<description>Disable alphabetic overlay when scrolling media</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Disable alphabetic overlay when scrolling media</label>
+					<onclick>Skin.ToggleSetting(DisableSortLetter)</onclick>
+					<selected>Skin.HasSetting(DisableSortLetter)</selected>
+
+				</control>
+				
+				<control type="label" id="850">
+
+					<include>Common_Settings_Label</include>
+					<label>Built-in addons</label>
+
+				</control>
+
+				<control type="radiobutton" id="801">
+
+					<description>Enable Now Watching Grid</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Show 'now watching' for videos</label>
+					<onclick>Skin.ToggleSetting(ShowNowWatchingNotification)</onclick>
+					<selected>Skin.HasSetting(ShowNowWatchingNotification)</selected>
+
+				</control>
+
+			</control>
+
+		</control>
+
+		<include>Common_Settings_Description</include>
+
+		<!--Scrollbar-->
+		<control type="scrollbar" id="83">
+
+			<include>Common_Settings_Scrollbar_Vertical</include>
+
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Container.Scrolling(300)">Conditional</animation>
+
+			<visible>Container(98).Hasfocus(3)</visible>
+
+		</control>
+
+		<!--Scrollbar-->
+		<control type="scrollbar" id="84">
+
+			<include>Common_Settings_Scrollbar_Vertical</include>
+
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Container.Scrolling(400)">Conditional</animation>
+
+			<visible>Container(98).Hasfocus(4)</visible>
+
+		</control>
+
+	</controls>
+
+</window>

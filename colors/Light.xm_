@@ -1,0 +1,11 @@
+<colors>
+	
+	<color name="Settings_Menu_Normal">FF333333</color>	
+	<color name="Settings_Background_Light">FFF5F5F5</color>
+	<color name="Settings_Background_Dark">FFEBEBEB</color>	
+	<color name="Settings_Label">FF333333</color>
+	<color name="Settings_Label_Disabled">FFC8C8C8</color>	
+	
+	<color name="Tile_Background">FF0086C7</color>
+	
+</colors>

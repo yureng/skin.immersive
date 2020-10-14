@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="54">
+
+	<zorder>2</zorder>
+
+	<visible>Window.IsActive(fullscreenvideo) + Skin.HasSetting(ShowNowWatchingNotification)</visible>
+
+	<controls>
+
+		<!--Bottom Area-->
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>720</posy>
+
+			<visible>String.IsEqual(VideoPlayer.Time,00:10) | String.IsEqual(VideoPlayer.Time,00:11) | String.IsEqual(VideoPlayer.Time,00:12) | String.IsEqual(VideoPlayer.Time,00:13) | String.IsEqual(VideoPlayer.Time,00:14) | String.IsEqual(VideoPlayer.Time,00:15) | String.IsEqual(VideoPlayer.Time,00:00:10) | String.IsEqual(VideoPlayer.Time,00:00:11) | String.IsEqual(VideoPlayer.Time,00:00:12) | String.IsEqual(VideoPlayer.Time,00:00:13) | String.IsEqual(VideoPlayer.Time,00:00:14) | String.IsEqual(VideoPlayer.Time,00:00:15)</visible>
+
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="400"/>
+				<effect type="slide" start="0,0" end="0,-100" time="400" tween="cubic" easing="out" />
+			</animation>
+
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="400" delay="600" />
+				<effect type="slide" start="0,-100" end="0,0" time="400" delay="600" tween="cubic" easing="in" />
+			</animation>
+
+			<control type="image">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+
+			</control>
+
+			<control type="grouplist">
+
+				<posx>60</posx>
+				<posy>20</posy>
+				<width>1200</width>
+				<height>60</height>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+
+				<visible>String.IsEqual(VideoPlayer.Time,00:10) | String.IsEqual(VideoPlayer.Time,00:11) | String.IsEqual(VideoPlayer.Time,00:12) | String.IsEqual(VideoPlayer.Time,00:13) | String.IsEqual(VideoPlayer.Time,00:14) | String.IsEqual(VideoPlayer.Time,00:15) | String.IsEqual(VideoPlayer.Time,00:00:10) | String.IsEqual(VideoPlayer.Time,00:00:11) | String.IsEqual(VideoPlayer.Time,00:00:12) | String.IsEqual(VideoPlayer.Time,00:00:13) | String.IsEqual(VideoPlayer.Time,00:00:14) | String.IsEqual(VideoPlayer.Time,00:00:15)</visible>
+
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="400" delay="400"/>
+					<effect type="slide" start="40,0" end="0,0" time="400" tween="cubic" easing="out" delay="400"/>
+				</animation>
+
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="400" delay="100" />
+					<effect type="slide" start="0,0" end="-40,0" time="400" delay="100" tween="cubic" easing="in" />
+				</animation>
+
+				<control type="label">
+
+					<posx>100</posx>
+					<posy>0</posy>
+					<width min="10" max="1200">auto</width>
+					<height>48</height>
+					<label>$LOCALIZE[208]:</label>
+					<font>Fullscreen-NowPlaying-Light</font>
+					<textcolor>Background_Highlight</textcolor>
+					<aligny>center</aligny>
+
+				</control>
+
+				<control type="label">
+
+					<posx>100</posx>
+					<posy>0</posy>
+					<width min="10" max="1200">auto</width>
+					<height>48</height>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<font>Fullscreen-NowPlaying-Bold</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+
+					<visible>!String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+
+				</control>
+
+				<control type="label">
+
+					<posx>100</posx>
+					<posy>45</posy>
+					<width min="10" max="1200">auto</width>
+					<height>48</height>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<font>Fullscreen-NowPlaying-Bold</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+
+					<visible>String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+
+				</control>
+
+			</control>
+
+			<control type="multiimage">
+
+				<posx>0</posx>
+				<posy>90</posy>
+				<width>1280</width>
+				<height>10</height>
+				<imagepath>overlays/colorbar</imagepath>
+				<timeperimage>500</timeperimage>
+				<fadetime>1000</fadetime>
+				<pauseatend>0</pauseatend>
+				<randomize>true</randomize>
+				<colordiffuse>Background_Highlight</colordiffuse>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

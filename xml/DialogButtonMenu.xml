@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="buttonMenu">
+
+
+	<defaultcontrol always="true">996</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+	<controls>
+
+		<control type="image">
+
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+
+			<include>Common_Animation_Window_Dark</include>
+
+		</control>
+
+		<control type="group">
+
+			<posx>1280</posx>
+			<posy>0</posy>
+			<width>320</width>
+			<height>720</height>
+
+			<animation effect="slide" start="0,0" end="-320,0" time="400" tween="cubic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="-320,0" end="0,0" time="200" tween="cubic" easing="in">WindowClose</animation>
+
+			<!--Background-->
+			<control type="image">
+
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture background="true">colors/color_keyboard_dark.png</texture>
+
+			</control>
+
+			<include>Common_ContextMenu_Header_Back</include>
+
+			<control type="label">
+
+				<include>Common_ContextMenu_Header</include>
+				<label>$LOCALIZE[13005]</label>
+
+			</control>
+
+			<control type="grouplist" id="996">
+
+				<description>grouplist for context buttons</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>320</width>
+				<height>600</height>
+				<itemgap>0</itemgap>
+				<onup></onup>
+				<ondown></ondown>
+
+				<!--Shutdown Button-->
+				<control type="button" id="2">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[13016]</label>
+					<onclick>Powerdown()</onclick>
+
+					<visible>System.CanPowerDown</visible>
+
+				</control>
+
+				<!--Custom Shutdown Timer Button-->
+				<control type="button" id="3">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[20150]</label>
+					<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+
+					<visible>!System.HasAlarm(shutdowntimer)</visible>
+					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+
+				</control>
+
+				<!--Cancel Custom Shutdown Timer Button-->
+				<control type="button" id="4">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[20151]</label>
+					<onclick>CancelAlarm(shutdowntimer)</onclick>
+
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+
+				</control>
+
+				<!--Suspend Button-->
+				<control type="button" id="5">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[13011]</label>
+					<onclick>Suspend()</onclick>
+
+					<visible>System.CanSuspend</visible>
+
+				</control>
+
+				<!--Hibernate Button-->
+				<control type="button" id="6">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[13010]</label>
+					<onclick>Hibernate()</onclick>
+
+					<!--visible>System.CanHibernate</visible-->
+					<visible>false</visible>
+
+				</control>
+
+				<!--Reset Button-->
+				<control type="button" id="7">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[13013]</label>
+					<onclick>Reset()</onclick>
+
+					<visible>System.CanReboot</visible>
+
+				</control>
+
+				<control type="image" id="999">
+
+					<posy>0</posy>
+					<posy>0</posy>
+					<width>320</width>
+					<height>1</height>
+					<texture>colors/color_keyboard.png</texture>
+
+				</control>
+
+				<!--Exit Button-->
+				<control type="button" id="8">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[13012]</label>
+					<onclick>XBMC.Quit()</onclick>
+
+					<visible>System.ShowExitButton</visible>
+
+				</control>
+
+				<!--LogOff Button-->
+				<control type="button" id="9">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>System.LogOff</onclick>
+
+					<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
+					<visible>System.Loggedon</visible>
+
+				</control>
+
+				<!--Master Button-->
+				<control type="togglebutton" id="10">
+
+					<include>Common_ContextMenu_Button</include>
+					<label>$LOCALIZE[20046]</label>
+					<altlabel>$LOCALIZE[20045]</altlabel>
+					<onclick>XBMC.MasterMode</onclick>
+					<usealttexture>!System.IsMaster</usealttexture>
+					<visible>System.HasLocks</visible>
+
+				</control>
+
+			</control>
+
+			<control type="group">
+
+				<posx>0</posx>
+				<posy>660</posy>
+
+				<visible>System.HasAlarm(shutdowntimer)</visible>
+
+				<control type="image">
+
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>288</width>
+					<height>1</height>
+					<texture>colors/color_white.png</texture>
+
+				</control>
+
+				<control type="image">
+
+					<posx>16</posx>
+					<posy>8</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>DefaultIconWarning.png</texture>
+					<aspectratio>keep</aspectratio>
+
+				</control>
+
+				<control type="textbox">
+
+					<posx>48</posx>
+					<posy>14</posy>
+					<width>300</width>
+					<height>42</height>
+					<label>[B]$INFO[System.Alarmpos]$LOCALIZE[13016][/B]</label>
+					<font>Appbar-Label-Small</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

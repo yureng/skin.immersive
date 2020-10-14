@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<controls>
+
+		<control type="visualisation">
+
+			<include>Common_Dimensions</include>
+			<visible>String.IsEmpty(MusicPlayer.Property(Fanart_Image))</visible>
+
+		</control>
+
+		<control type="image">
+
+			<include>Common_Dimensions</include>
+			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+
+			<animation type="Conditional" condition="Integer.IsGreater(System.Time(ss),00) + !Integer.IsGreater(System.Time(ss),20)" reversible="true">
+				<effect type="slide" acceleration="10" tween="cubic" easing="inout" start="100,0" end="-100,0" time="20000"/>
+				<effect type="zoom" center="640,360" start="100" end="125" time="10000"/>
+			</animation>
+
+			<animation type="Conditional" condition="Integer.IsGreater(System.Time(ss),19) + !Integer.IsGreater(System.Time(ss),40)" reversible="true">
+				<effect type="slide" acceleration="10" tween="cubic" easing="inout" start="-100,0" end="250,10" time="20000"/>
+				<effect type="zoom" center="640,360" start="125" end="150" time="10000"/>
+			</animation>
+
+			<animation type="Conditional" condition="Integer.IsGreater(System.Time(ss),39) + !Integer.IsGreater(System.Time(ss),60)" reversible="true">
+				<effect type="slide" acceleration="10" tween="cubic" easing="inout" start="250,10" end="-100,0" time="20000"/>
+				<effect type="zoom" center="640,360" start="150" end="100" time="10000"/>
+			</animation>
+
+		</control>
+
+		<control type="image">
+
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>50000000</colordiffuse>
+
+		</control>
+
+		<control type="multiimage">
+
+			<include>Common_Dimensions</include>
+			<imagepath>tile/fullscreen</imagepath>
+			<timeperimage>2000</timeperimage>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+
+		</control>
+
+		<!--1st Animation-->
+		<control type="group">
+
+			<visible>Integer.IsGreater(System.Time(ss),00) + !Integer.IsGreater(System.Time(ss),10)</visible>
+
+			<animation type="Visible" reversible="false">
+
+				<effect type="rotate" end="-45,0" />
+				<effect type="slide" start="1280,200" end="-4000,200" time="10000"/>
+
+			</animation>
+
+			<include>Common_Music_SlideLabels</include>
+
+		</control>
+
+		<!--2rd Animation-->
+		<control type="group">
+
+			<posx>-400</posx>
+			<posy>720</posy>
+
+			<visible>Integer.IsGreater(System.Time(ss),9) + !Integer.IsGreater(System.Time(ss),20)</visible>
+
+			<animation type="Visible" reversible="false">
+
+				<effect type="rotate" end="45,0" />
+				<effect type="slide" start="-4000,0" end="1280,0" time="10000" />
+
+			</animation>
+
+			<include>Common_Music_SlideLabels</include>
+
+		</control>
+
+		<!--3th Animation (No Artist Description)-->
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>400</posy>
+
+			<visible>String.IsEmpty(MusicPlayer.Property(Artist_Description)) + Integer.IsGreater(System.Time(ss),19) + !Integer.IsGreater(System.Time(ss),30)</visible>
+
+			<animation type="Visible" reversible="false">
+
+				<effect type="slide" start="1280,0" end="-4000,0" time="10000" />
+
+			</animation>
+
+			<include>Common_Music_SlideLabels</include>
+
+		</control>
+
+		<!--3th Animation (Artist Description)-->
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>400</posy>
+			<visible>!String.IsEmpty(MusicPlayer.Property(Artist_Description)) + Integer.IsGreater(System.Time(ss),19) + !Integer.IsGreater(System.Time(ss),30)</visible>
+
+			<animation type="Visible" reversible="false">
+
+				<effect type="slide" start="0,0" end="0,-3000" time="10000" />
+				<effect type="fade" start="100" end="0" time="1000" delay="9000" />
+
+			</animation>
+
+			<control type="textbox">
+
+				<posx>0</posx>
+				<posy>720</posy>
+				<width>1280</width>
+				<height>4000</height>
+				<label>$INFO[MusicPlayer.Property(Artist_Description)]</label>
+				<font>Fullscreen-Slide-Medium</font>
+				<textcolor>White_30</textcolor>
+				<autoscroll>false</autoscroll>
+
+			</control>
+
+		</control>
+
+		<!--4th Animation-->
+		<control type="group">
+
+			<posx>1200</posx>
+			<posy>700</posy>
+
+			<visible>Integer.IsGreater(System.Time(ss),29) + !Integer.IsGreater(System.Time(ss),40)</visible>
+
+			<animation type="Visible" reversible="false">
+
+				<effect type="rotate" end="90,0" center="640,360" />
+				<effect type="slide" start="0,0" end="-5200,0" time="10000" />
+
+			</animation>
+
+			<include>Common_Music_SlideLabels</include>
+
+		</control>
+
+		<!--5th Animation-->
+		<control type="group">
+
+			<posx>800</posx>
+			<posy>700</posy>
+
+			<visible>Integer.IsGreater(System.Time(ss),39) + !Integer.IsGreater(System.Time(ss),50)</visible>
+
+			<animation type="Visible" reversible="false">
+
+				<effect type="rotate" end="90,0" center="640,360" />
+				<effect type="slide" start="0,0" end="-5200,0" time="10000" />
+
+			</animation>
+
+			<include>Common_Music_SlideLabels</include>
+
+		</control>
+
+		<!--Top Area-->
+		<control type="group">
+
+			<visible>Player.ShowInfo + !Window.IsVisible(VisualisationSettings) + !Window.IsVisible(VisualisationPresetList)</visible>
+
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="400" />
+			</animation>
+
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="400" delay="400" />
+			</animation>
+
+			<control type="image">
+
+				<include>Common_Dimensions</include>
+				<texture>overlays/overlay_fullscreen_top.png</texture>
+
+			</control>
+
+			<include>Common_Breadcrumb_Alt</include>
+
+		</control>
+
+	</controls>
+
+</window>

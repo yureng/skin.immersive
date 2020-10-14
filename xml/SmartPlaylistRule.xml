@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">15</defaultcontrol>
+	
+
+	<controls>
+
+		<include>Common_Settings_Background</include>
+
+		<!--Menu-->
+		<control type="group">
+
+			<include>Common_Settings_Header_Back</include>
+
+			<control type="label">
+
+				<include>Common_Settings_Header</include>
+				<label>Edit rule</label>
+
+			</control>
+
+			<control type="list" id="98">
+
+				<onup>98</onup>
+				<ondown>98</ondown>
+				<onleft></onleft>
+				<onright>99</onright>
+
+				<include>Common_Settings_Menu_List</include>
+
+				<content>
+
+					<item id="1">
+						<description>Rules</description>
+						<label>rules</label>
+						<onclick></onclick>
+					</item>
+
+				</content>
+
+			</control>
+
+		</control>
+
+		<control type="group" id="99">
+
+			<include>Common_Settings_Group</include>
+			<include>Common_Animation_Settings_Options</include>
+
+			<!--Filters Section-->
+			<control type="grouplist">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>420</height>
+				<pagecontrol>80</pagecontrol>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<ondown>9000</ondown>
+
+				<control type="label">
+
+					<include>Common_Settings_Label</include>
+					<label>$LOCALIZE[21422]</label>
+
+				</control>
+
+				<control type="spincontrolex" id="15">
+
+					<include>Common_Settings_SpinButton</include>
+					<label></label>
+					<onup>17</onup>
+					<ondown>16</ondown>
+					<onleft>98</onleft>
+					<onright condition="!System.GetBool(Input.EnableMouse) | !Skin.HasSetting(UseTouchInput)">9000</onright>
+
+				</control>
+
+				<control type="spincontrolex" id="16">
+
+					<include>Common_Settings_SpinButton</include>
+					<label></label>
+					<onup>15</onup>
+					<ondown>17</ondown>
+					<onleft>98</onleft>
+					<onright condition="!System.GetBool(Input.EnableMouse) | !Skin.HasSetting(UseTouchInput)">9000</onright>
+
+				</control>
+
+				<control type="edit" id="17">
+
+					<include>Common_Settings_Edit</include>
+					<label>$LOCALIZE[1024]</label>
+					<onup>16</onup>
+					<ondown>20</ondown>
+					<onleft>98</onleft>
+					<onright condition="!System.GetBool(Input.EnableMouse) | !Skin.HasSetting(UseTouchInput)">9000</onright>
+
+				</control>
+
+				<control type="button" id="20">
+
+					<include>Common_Settings_Button</include>
+					<onup>17</onup>
+					<ondown>15</ondown>
+					<onleft>98</onleft>
+					<onright condition="!System.GetBool(Input.EnableMouse) | !Skin.HasSetting(UseTouchInput)">9000</onright>
+
+				</control>
+
+			</control>
+
+		</control>
+
+		<!--AppBar-->
+		<include>Common_Settings_Divider</include>
+
+		<control type="grouplist" id="9000">
+
+			<include>Common_Settings_Button_Grouplist</include>
+
+			<!--Okay Button-->
+			<control type="button" id="18">
+
+				<include>Common_Settings_Control_Button</include>
+				<label>$LOCALIZE[186]</label>
+				<onup>99</onup>
+
+			</control>
+
+			<!--Cancel Button-->
+			<control type="button" id="19">
+
+				<include>Common_Settings_Control_Button</include>
+				<label>$LOCALIZE[222]</label>
+				<onup>99</onup>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

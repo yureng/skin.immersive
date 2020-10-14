@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fonts>
+
+	<fontset id="default">
+
+		<!--Appbar Fonts-->
+
+		<font>
+			<name>Appbar-Label</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Appbar-Label-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>12</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>Appbar-Info</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Appbar-Info-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>12</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--Breadcrumb Fonts-->
+
+		<font>
+			<name>Breadcrumb-Home</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>58</size>
+		</font>
+
+		<font>
+			<name>Breadcrumb-SubFolder</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>40</size>
+		</font>
+
+		<font>
+			<name>Breadcrumb-Home-Alt</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Breadcrumb-SubFolder-Alt</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--Clock Fonts-->
+
+		<font>
+			<name>Clock-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Clock-Detail</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--Content Fonts-->
+
+		<font>
+			<name>Content-Label</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Content-Label-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<!--Context Fonts-->
+
+		<font>
+			<name>Context-List</name>
+			<filename>Hwh-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Context-List-Small</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>12</size>
+		</font>
+
+		<!--Dialog Fonts-->
+
+		<font>
+			<name>Dialog-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Dialog-Detail</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Dialog-Detail-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--DialogDownloadProgress Fonts-->
+
+		<font>
+			<name>DialogDownloadProgress-Detail</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>DialogDownloadProgress-Detail-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<!--Fonts Specific to DialogVideoInfo.xml-->
+
+		<font>
+			<name>DialogInfo-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>DialogInfo-Label</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>DialogInfo-Header-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>DialogInfo-Label-Small</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<!--Dropdown Fonts-->
+
+		<font>
+			<name>Dropdown-Label</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>24</size>
+		</font>
+
+		<!--Favourites Fonts-->
+
+		<font>
+			<name>Favourites-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--File Browser Fonts-->
+
+		<font>
+			<name>FileBrowser-Details-Large</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>24</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>FileBrowser-Details-Small</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<!--Fullscreen Fonts-->
+
+		<font>
+			<name>Fullscreen-Slide-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>210</size>
+		</font>
+
+		<font>
+			<name>Fullscreen-Slide-Medium</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>100</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Fullscreen-Slide-Small</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>48</size>
+		</font>
+
+		<font>
+			<name>Fullscreen-NowPlaying-Bold</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+
+		<font>
+			<name>Fullscreen-NowPlaying-Light</name>
+			<filename>Hwh-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+
+		<font>
+			<name>Fullscreen-Info-Large</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Fullscreen-Info-Normal</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Fullscreen-Info-Normal-Bold</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Fullscreen-Info-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--GlobalSearch Fonts-->
+
+		<font>
+			<name>GlobalSearch-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>42</size>
+		</font>
+
+		<font>
+			<name>GlobalSearch-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<!--Home Fonts-->
+
+		<font>
+			<name>Home-Featured</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Home-Featured-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>24</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Home-RecentWatched</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Home-RecentWatched-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Home-Tile-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Home-Tile-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Home-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>34</size>
+		</font>
+
+		<!--Kai Fonts-->
+
+		<font>
+			<name>Kai-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>Kai-Detail</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>16</size>
+			<style>lowercase</style>
+		</font>
+
+		<!--Keyboard Fonts-->
+
+		<font>
+			<name>Keyboard-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Keyboard-Label</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<!--View Fonts-->
+
+		<font>
+			<name>Menu-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Menu-Scroll</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>32</size>
+			<style>lowercase</style>
+		</font>
+
+		<font>
+			<name>Menu-Banner-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Menu-Details-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Menu-Details</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Menu-Details-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Menu-ExtendedList-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Menu-ExtendedList-Details</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Menu-ExtendedList-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Menu-Featured-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>38</size>
+		</font>
+
+		<font>
+			<name>Menu-Featured</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Menu-Featured-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-List-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>46</size>
+		</font>
+
+		<font>
+			<name>Menu-List</name>
+			<filename>Hwh-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Menu-List-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Menu-List-Detail</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Menu-List-Plot</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Menu-Grid-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>34</size>
+		</font>
+
+		<font>
+			<name>Menu-Grid-Details</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Menu-Grid-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Menu-InCinemas-Large</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-InCinemas-Plot</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Menu-InCinemas-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-RecentlyAdded-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>42</size>
+		</font>
+
+		<font>
+			<name>Menu-RecentlyAdded-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Menu-Similar-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Menu-Similar-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-Similar-Plot</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Menu-Square-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-Square-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-Tall-Large</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Menu-Tall</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Menu-Thumbnail-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-Thumbnail-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Menu-Trakt-Tile</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>28</size>
+			<style>lowercase</style>
+		</font>
+
+		<!--NowPlaying Fonts-->
+
+		<font>
+			<name>NowPlaying-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>NowPlaying-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>12</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>NowPlaying-Detail-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>12</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--Pivot Fonts-->
+
+		<font>
+			<name>Pivot-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<style>lowercase</style>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Pivot-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>18</size>
+		</font>
+
+		<!--Profile Fonts-->
+
+		<font>
+			<name>Profile-Settings-Name</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>32</size>
+		</font>
+
+		<font>
+			<name>Profile-Settings-Directory</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<!--PVR Fonts-->
+
+		<font>
+			<name>PVR-EPGListing-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>PVR-EPG-Time</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>24</size>
+			<style>lowercase</style>
+		</font>
+
+		<!--RSS Fonts-->
+
+		<font>
+			<name>RSS-Normal</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<!--Screensaver Fonts-->
+
+		<font>
+			<name>Screensaver-Time</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>128</size>
+		</font>
+
+		<font>
+			<name>Screensaver-Date</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>48</size>
+		</font>
+
+		<font>
+			<name>Screensaver-NowPlaying</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<!--Select Fonts-->
+
+		<font>
+			<name>Select-Large</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Select-Normal</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>24</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Select-Small</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+
+		<!--Setting Dialog Fonts-->
+
+		<font>
+			<name>Settings-Menu-Header</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>36</size>
+		</font>
+
+		<font>
+			<name>Settings-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Settings-Label</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<!--SortLetter Fonts-->
+
+		<font>
+			<name>SortLetter-Label</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>32</size>
+		</font>
+
+		<!--Tile Fonts-->
+
+		<font>
+			<name>Tile-Header</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Tile-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>72</size>
+		</font>
+
+		<font>
+			<name>Tile-Description</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Tile-Square-Header</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Tile-Square-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<!--Weather Fonts-->
+
+		<font>
+			<name>Weather-36HourChancePrecipitation</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-36HourForecast</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Weather-36HourHeading</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-36HourTemp</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-City</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Weather-Updated</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>Weather-CurrentTemp</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>128</size>
+		</font>
+
+		<font>
+			<name>Weather-CurrentCondition</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>24</size>
+		</font>
+
+		<font>
+			<name>Weather-CurrentFeelsLike</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Weather-ExtendedDay</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>24</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-ExtendedDate</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-ExtendedTemp</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>24</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-ExtendedCondition</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-HourlyTime</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-HourlyDate</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-HourlyCondition</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-HourlyTemp</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Weather-Header</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>Weather-Detail</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>18</size>
+		</font>
+
+
+		<!--											-->
+		<!--	      3rd Party Addon Fonts			    -->
+		<!--											-->
+
+		<!--Big Picture Addon Fonts-->
+
+		<font>
+			<name>BigPicture-Album</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>14</size>
+		</font>
+
+		<font>
+			<name>BigPicture-Title</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>BigPicture-PhotoName</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>46</size>
+		</font>
+
+		<font>
+			<name>BigPicture-Description</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<!--Lyrics Addon Fonts-->
+
+		<font>
+			<name>Lyrics-Lyric</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Lyrics-Scraper</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>12</size>
+		</font>
+
+		<!--Generic Fonts-->
+
+		<font>
+			<name>Large</name>
+			<filename>Hwh-Bold.ttf</filename>
+			<size>300</size>
+		</font>
+
+		<font>
+			<name>Medium</name>
+			<filename>Hwh-Regular.ttf</filename>
+			<size>26</size>
+		</font>
+
+		<font>
+			<name>Small</name>
+			<filename>Hwh-Light.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
+
+	</fontset>
+
+</fonts>

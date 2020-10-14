@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9902</defaultcontrol>
+
+	<controls>
+		<include>Common_Background_Fade</include>
+
+		<control type="textbox" id="9">
+			<visable>false</visable>
+			<label></label>
+		</control>
+
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>210</posy>
+
+			<include>Common_Animation_Dialog</include>
+
+			<control type="image">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>300</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>Background_Normal</colordiffuse>
+
+			</control>
+
+			<control type="group" id="9901">
+
+				<posx>300</posx>
+				<posy>20</posy>
+				<width>880</width>
+				<height>240</height>
+
+				<control type="label" id="1">
+					<width>680</width>
+					<font>Dialog-Header</font>
+					<label></label>
+				</control>
+
+				<control type="label">
+					<posy>26</posy>
+					<width>680</width>
+					<height min="35" max="120">auto</height>
+					<font>Dialog-Detail</font>
+					<label>$INFO[Control.GetLabel(9)]</label>
+				</control>
+
+				<control type="progress" id="20">
+					<posy>180</posy>
+					<width>680</width>
+					<height>10</height>
+					<texturebg>colors/color_grey.png</texturebg>
+					<midtexture>colors/color_silver.png</midtexture>
+					<info>System.Progressbar</info>
+				</control>
+
+			</control>
+
+			<control type="grouplist" id="9902">
+				<posx>580</posx>
+				<posy>240</posy>
+				<width>400</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+
+				<control type="button" id="11">
+					<include>Common_InfoDialog_Button</include>
+					<label></label>
+				</control>
+				
+				<control type="button" id="10">
+					<include>Common_InfoDialog_Button</include>
+					<label></label>
+				</control>
+				
+				<control type="button" id="12">
+					<include>Common_InfoDialog_Button</include>
+					<label></label>
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+</window>
+

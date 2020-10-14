@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">3</defaultcontrol>	
+
+	<controls>
+
+		<include>Common_Settings_Background</include>
+
+		<control type="group">
+
+			<include>Common_Settings_Header_Back</include>
+
+			<control type="label">
+
+				<include>Common_Settings_Header</include>
+				<label>130</label>
+
+			</control>
+
+			<control type="grouplist" id="3">
+
+				<description>grouplist for context buttons</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>420</width>
+				<height max="600">auto</height>
+				<itemgap>0</itemgap>
+				<onright>5</onright>
+
+				<control type="button" id="95">
+
+					<description>General</description>
+					<include>Common_Settings_Menu</include>
+					<label>20037</label>
+
+				</control>
+
+				<control type="button" id="94">
+
+					<description>Storage</description>
+					<include>Common_Settings_Menu</include>
+					<label>13277</label>
+
+				</control>
+
+				<control type="button" id="96">
+
+					<description>Network</description>
+					<include>Common_Settings_Menu</include>
+					<label>13279</label>
+
+				</control>
+
+				<control type="button" id="97">
+
+					<description>Video</description>
+					<include>Common_Settings_Menu</include>
+					<label>13280</label>
+
+				</control>
+
+				<control type="button" id="98">
+
+					<description>Hardware</description>
+					<include>Common_Settings_Menu</include>
+					<label>13281</label>
+
+				</control>
+
+			</control>
+
+		</control>
+
+		<control type="group">
+
+			<posx>400</posx>
+			<posy>100</posy>
+			<width>800</width>
+			<height>480</height>
+
+			<control type="grouplist" id="5">
+
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>600</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<usecontrolcoords>true</usecontrolcoords>
+
+				<include>Common_Animation_Settings_Options</include>
+
+				<control type="label" id="52">
+
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+
+				</control>
+
+				<control type="label" id="21">
+
+					<description>CPU Text</description>
+					<include>Common_Settings_Button</include>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+
+				</control>
+
+				<control type="progress" id="22">
+
+					<description>CPU BAR</description>
+					<include>Common_Settings_Progress</include>
+					<info>System.CPUUsage</info>
+
+				</control>
+
+				<control type="label" id="23">
+
+					<description>Memory Text</description>
+					<include>Common_Settings_Button</include>
+					<label>$LOCALIZE[31030] $INFO[system.memory(used.percent)]</label>
+
+				</control>
+
+				<control type="progress" id="24">
+
+					<description>Memory BAR</description>
+					<include>Common_Settings_Progress</include>
+					<info>system.memory(used)</info>
+
+				</control>
+
+				<control type="label" id="25">
+					<visible>false</visible>
+				</control>
+
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(2))</visible>
+				</control>
+
+				<control type="label" id="3">
+					<description>Label 3</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(3))</visible>
+				</control>
+
+				<control type="label" id="4">
+					<description>Label 4</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(4))</visible>
+				</control>
+
+				<control type="label" id="5">
+					<description>Label 5</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(5))</visible>
+				</control>
+
+				<control type="label" id="6">
+					<description>Label 6</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(6))</visible>
+				</control>
+
+				<control type="label" id="7">
+					<description>Label 7</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(7))</visible>
+				</control>
+
+				<control type="label" id="8">
+					<description>Label 8</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(8))</visible>
+				</control>
+
+				<control type="label" id="9">
+					<description>Label 9</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(9))</visible>
+				</control>
+
+				<control type="label" id="10">
+					<description>Label 10</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(10))</visible>
+				</control>
+
+				<control type="label" id="11">
+					<description>Label 11</description>
+					<include>Common_Settings_Button</include>
+					<visible>!String.IsEmpty(Control.GetLabel(11))</visible>
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

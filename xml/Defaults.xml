@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<default type="edit">
+
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="label">
+
+		<label></label>
+		<height>44</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Small</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<scroll>false</scroll>
+		<scrollspeed>0</scrollspeed>
+
+	</default>
+
+	<default type="fadelabel">
+
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>44</height>
+		<label></label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Small</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>Red</disabledcolor>
+		<scrollout>false</scrollout>
+		<pauseatend>2000</pauseatend>
+
+	</default>
+
+	<default type="image">
+
+		<posx>0</posx>
+		<posy>0</posy>
+		<width></width>
+		<height></height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture></texture>
+
+	</default>
+
+	<default type="button">
+
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_transparent.png</texturenofocus>
+		<font>Menu-List</font>
+		<textcolor>Label_Normal</textcolor>
+		<selectedcolor>Label_Highlight</selectedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="togglebutton">
+
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_transparent.png</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus></alttexturenofocus>
+		<font>Menu-List</font>
+		<textcolor>Label_Normal</textcolor>
+		<selectedcolor>Label_Highlight</selectedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="radiobutton">
+
+		<height>60</height>
+		<radiowidth>50</radiowidth>
+		<radioheight>19</radioheight>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<textureradioon diffuse="colors/color_white.png">controls/control_radiobutton_on.png</textureradioon>
+		<textureradiooff diffuse="colors/color_white.png">controls/control_radiobutton_off.png</textureradiooff>
+		<font>Menu-List</font>
+		<textcolor>Label_Normal</textcolor>
+		<selectedcolor>Label_Highlight</selectedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="spincontrolex">
+
+		<height>60</height>
+		<spinwidth>50</spinwidth>
+		<spinheight>19</spinheight>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_transparent.png</texturenofocus>
+		<textureup diffuse="colors/color_white.png">controls/control_spinbutton_up.png</textureup>
+		<textureupfocus diffuse="colors/color_white.png">controls/control_spinbutton_up.png</textureupfocus>
+		<texturedown diffuse="colors/color_white.png">controls/control_spinbutton_down.png</texturedown>
+		<texturedownfocus diffuse="colors/color_white.png">controls/control_spinbutton_down.png</texturedownfocus>
+		<colordiffuse>Background_Highlight</colordiffuse>
+		<font>Menu-List</font>
+		<textcolor>Label_Normal</textcolor>
+		<selectedcolor>Label_Highlight</selectedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="spincontrol">
+
+		<height>60</height>
+		<spinwidth>50</spinwidth>
+		<spinheight>19</spinheight>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_transparent.png</texturenofocus>
+		<textureup diffuse="colors/color_black.png">controls/control_spinbutton_up.png</textureup>
+		<textureupfocus diffuse="colors/color_black.png">controls/control_spinbutton_up.png</textureupfocus>
+		<texturedown diffuse="colors/color_black.png">controls/control_spinbutton_down.png</texturedown>
+		<texturedownfocus diffuse="colors/color_black.png">controls/control_spinbutton_down.png</texturedownfocus>
+		<colordiffuse>Background_Highlight</colordiffuse>
+		<font>Menu-List</font>
+		<textcolor>Settings_Menu_Normal</textcolor>
+		<selectedcolor>Background_Highlight</selectedcolor>
+		<disabledcolor>Settings_Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="sliderex">
+
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_transparent.png</texturenofocus>
+		<sliderwidth>160</sliderwidth>
+		<sliderheight>15</sliderheight>
+		<texturesliderbar>controls/control_slider.png</texturesliderbar>
+		<textureslidernib border="2">controls/control_slider_nib.png</textureslidernib>
+		<textureslidernibfocus border="2">controls/control_slider_nib.png</textureslidernibfocus>
+		<colordiffuse>Background_Highlight</colordiffuse>
+		<font>Menu-List</font>
+		<textcolor>Label_Normal</textcolor>
+		<selectedcolor>Label_Highlight</selectedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+
+	</default>
+
+	<default type="progress">
+		<height>5</height>
+		<texturebg>colors/color_keyboard_dark.png</texturebg>
+		<lefttexture></lefttexture>
+		<midtexture colordiffuse="Background_Highlight">colors/color_white.png</midtexture>
+		<righttexture></righttexture>
+	</default>
+
+	<default type="slider">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>420</width>
+		<height>15</height>
+		<texturefocus></texturefocus>
+		<texturenofocus></texturenofocus>
+		<texturesliderbar>other_textures/OSD/slider_bg_2.png</texturesliderbar>
+		<textureslidernib border="2">controls/control_slider_nib.png</textureslidernib>
+		<textureslidernibfocus border="2">controls/control_slider_nib.png</textureslidernibfocus>
+		<orientation>horizontal</orientation>
+	</default>
+
+	<default type="scrollbar">
+		<texturesliderbackground></texturesliderbackground>
+		<texturesliderbar>colors/color_lightgrey.png</texturesliderbar>
+		<texturesliderbarfocus>colors/color_white.png</texturesliderbarfocus>
+		<showonepage>true</showonepage>
+	</default>
+
+	<default type="textbox">
+
+		<label></label>
+		<wrapmultiline>true</wrapmultiline>
+		<shadowcolor>00FFFFFF</shadowcolor>
+		<autoscroll>false</autoscroll>
+
+	</default>
+
+</includes>

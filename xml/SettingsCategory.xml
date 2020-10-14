@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">3</defaultcontrol>
+
+
+	<controls>
+
+		<control type="group">
+
+			<include>Common_Settings_Background</include>
+
+			<!--Menu-->
+			<control type="group">
+
+				<include>Common_Settings_Header_Back</include>
+
+				<control type="label" id="2">
+
+					<include>Common_Settings_Header</include>
+
+				</control>
+
+				<control type="grouplist" id="3">
+					
+					<posx>0</posx>
+					<posy>100</posy>
+					<width>420</width>
+					<height max="500">auto</height>
+					<itemgap>0</itemgap>
+					<onright>5</onright>
+					<ondown>20</ondown>
+					
+				</control>
+
+				<control type="image">
+
+					<posx>14</posx>
+					<posy>615</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>dialoginfo\dialoginfo_configure.png</texture>
+					<colordiffuse>Label_Normal</colordiffuse>
+
+				</control>
+
+				<control type="button" id="20">
+
+					<posx>69</posx>
+					<posy>605</posy>
+					<height>60</height>
+					<width>290</width>
+					<texturefocus>colors/color_white.png</texturefocus>
+					<colordiffuse>Red</colordiffuse>
+					<textcolor>Settings_Label</textcolor>
+					<focusedcolor>Settings_Label_Highlight</focusedcolor>
+					<font>Menu-List</font>
+					<textoffsetx>12</textoffsetx>
+					<align></align>
+
+					<onright>5</onright>
+					<onup>3</onup>
+					<onclick>SettingsLevelChange</onclick>
+
+				</control>
+
+			</control>
+
+			<!--Controls-->
+			<control type="group">
+
+				<include>Common_Settings_Group</include>
+
+				<control type="grouplist" id="5">
+
+					<description>Control Area</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>420</height>
+					<itemgap>0</itemgap>
+					<onleft>3</onleft>
+					<orientation>vertical</orientation>
+					<pagecontrol>81</pagecontrol>
+
+				</control>
+
+			</control>
+
+			<!--Scrollbar-->
+			<control type="scrollbar" id="81">
+
+				<include>Common_Settings_Scrollbar_Vertical</include>
+
+				<posx>1260</posx>
+				<posy>100</posy>
+				<height>480</height>
+
+				<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(81)">Conditional</animation>
+
+			</control>
+
+			<!--Setting description-->
+			<include>Common_Settings_Description</include>
+
+		</control>
+
+		<control type="button" id="7">
+
+			<description>Default Button</description>
+			<include>Common_Settings_Button</include>
+
+		</control>
+
+		<control type="radiobutton" id="8">
+
+			<description>Default Radio Button</description>
+			<include>Common_Settings_RadioButton</include>
+
+		</control>
+
+		<control type="spincontrolex" id="9">
+
+			<description>Default Spin Control</description>
+			<include>Common_Settings_SpinButton</include>
+
+		</control>
+
+		<control type="togglebutton" id="10">
+
+			<description>Default Category Button</description>
+			<include>Common_Settings_Menu</include>
+
+		</control>
+
+		<control type="image" id="11">
+
+			<visible>false</visible>
+
+		</control>
+
+		<control type="edit" id="12">
+			<include>Common_Settings_Edit</include>
+		</control>
+
+		<control type="sliderex" id="13">
+
+			<description>Default Spin Control</description>
+			<include>Common_Settings_SliderEx</include>
+
+		</control>
+
+		<control type="label" id="14">
+
+			<description>Default Label</description>
+			<include>Common_Settings_Label</include>
+
+		</control>
+
+	</controls>
+
+</window>

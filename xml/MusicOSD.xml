@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<onunload>Skin.Reset(ShowMoreOptionsMenu)</onunload>
+	<onload>Skin.Reset(ShowMoreOptionsMenu)</onload>
+	<onload>AlarmClock(CloseOSD,Dialog.Close(10120, force),00:60,silent)</onload>
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<controls>
+
+		<include>Common_OSD_Controls</include>
+
+		<!--More Options Menu-->
+		<control type="group">
+
+			<visible>Skin.HasSetting(ShowMoreOptionsMenu)</visible>
+
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+
+			<control type="image">
+
+				<posx>1048</posx>
+				<posy>0</posy>
+				<width>232</width>
+				<height>604</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>DDFFFFFF</colordiffuse>
+
+			</control>
+
+			<control type="list" id="10001">
+
+				<posx>1048</posx>
+				<posy>0</posy>
+				<width>232</width>
+				<height>420</height>
+				<onup>10001</onup>
+				<ondown>10001</ondown>
+				<onleft>SetFocus(413)</onleft>
+				<onleft>Skin.Reset(ShowMoreOptionsMenu)</onleft>
+				<onright>SetFocus(413)</onright>
+				<onright>Skin.Reset(ShowMoreOptionsMenu)</onright>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="List">list</viewtype>
+				<scrolltime tween="Cubic " easing="inout">200</scrolltime>
+				<preloaditems>2</preloaditems>
+
+				<itemlayout width="232" height="60">
+
+					<!--control type="image">
+								
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>232</width>
+						<height>60</height>
+						<texture>colors/color_white.png</texture>
+						
+					</control-->
+
+					<control type="label">
+
+						<posx>16</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Label_Dark</textcolor>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout width="232" height="60">
+
+					<control type="image">
+
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>232</width>
+						<height>60</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>Background_Highlight</colordiffuse>
+
+					</control>
+
+					<control type="label">
+
+						<posx>16</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Label_Normal</textcolor>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+
+					</control>
+
+				</focusedlayout>
+
+				<content>
+					
+					<item>
+						<label>$LOCALIZE[40040]</label>
+						<onclick>SetFocus(413)</onclick>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+						<enable>Visualisation.Enabled</enable>
+					</item>
+
+					<item>
+						<label>$LOCALIZE[40041]</label>
+						<onclick>SetFocus(413)</onclick>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>ActivateWindow(122)</onclick>
+						<enable>Visualisation.Enabled</enable>
+					</item>
+					
+					<item>
+						<label>$LOCALIZE[24010]</label>
+						<onclick>SetFocus(413)</onclick>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>SendClick(500)</onclick>
+					</item>
+					
+					<item>
+						<label>$LOCALIZE[40039]</label>
+						<onclick>SetFocus(413)</onclick>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>Close</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(LyricPath)])</onclick>
+					</item>
+
+					<item>
+						<label>$VAR[OSD_Repeat_Label]</label>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>playercontrol(repeat)</onclick>
+					</item>
+
+					<item>
+						<label>$VAR[OSD_Random_Label]</label>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>playercontrol(random)</onclick>
+					</item>
+
+				</content>
+
+			</control>
+
+		</control>
+		
+	</controls>
+
+</window>

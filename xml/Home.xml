@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">50</defaultcontrol>	
+
+	<!--Reset Appbar-->
+	<onload>Skin.Reset(ShowAppBar)</onload>
+	<onunload>Skin.Reset(ShowAppBar)</onunload>
+
+	<!-- <onload>XBMC.RunScript(script.favourites)</onload> -->
+	<!-- <onload>Weather.Refresh</onload> -->
+
+	<controls>
+
+		<!--Background-->
+		<include>Common_Background</include>
+
+		<control type="image">
+			<include>Common_Dimensions</include>
+			<texture flipy="true">overlays/overlay_fullscreen_top.png</texture>
+			<posx>0</posx>
+			<posy>720</posy>
+		</control>
+
+		<control type="group">
+
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_Window</include>
+
+			<!--Top Section-->
+			<include>Common_Clock</include>
+			<include>Common_Overlay</include>
+
+			<control type="grouplist">
+
+				<posx>55</posx>
+				<posy>16</posy>
+				<width>200</width>
+				<height>85</height>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+
+				<control type="image">
+
+					<width>85</width>
+					<height>85</height>
+					<texture>home/home.png</texture>
+					<aspectratio>keep</aspectratio>
+
+				</control>
+
+				<!-- <control type="image">
+								
+					<width>135</width>
+					<height>65</height>
+					<texture>home/home_logo_text.png</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>Background_Highlight</colordiffuse>
+				</control> -->
+
+			</control>
+
+			<!-- <control type="label">
+
+					<label>$LOCALIZE[335]</label>
+					<posx>68</posx>
+					<posy>24</posy>
+					<width>340</width>
+					<height>40</height>
+					<font>Fullscreen-Slide-Small</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+
+				</control> -->
+
+			<!--Content Area-->
+			<control type="group">
+
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+
+				<!--Animation-->
+				<include>Common_Animation_Content</include>
+
+				<control type="grouplist" id="50">
+
+					<posx>60</posx>
+					<orientation>horizontal</orientation>
+		
+					<include>Home_NowPlaying</include>
+					<include>Home_Custom</include>
+
+				</control>
+
+			</control>
+
+			<!--RSS-->
+			<include>Common_RSS</include>
+
+			<!--Context Menu-->
+			<include>Common_AppBar</include>
+
+		</control>
+
+	</controls>
+
+</window>

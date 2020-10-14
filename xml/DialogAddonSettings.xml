@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">9</defaultcontrol>
+
+	<include>Common_Animation_Window</include>
+
+	<controls>
+
+		<include>Common_Settings_Background</include>
+
+		<!--Menu-->
+		<control type="group">
+
+			<include>Common_Settings_Header_Back</include>
+
+			<control type="label" id="2">
+
+				<include>Common_Settings_Header</include>
+				<!--<label>$LOCALIZE[5]</label>-->
+
+			</control>
+
+			<control type="grouplist" id="3">
+
+				<description>grouplist for context buttons</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>420</width>
+				<height>600</height>
+				<itemgap>0</itemgap>
+				<onright>5</onright>
+
+			</control>
+
+		</control>
+
+		<!--Controls-->
+		<control type="group">
+
+			<include>Common_Settings_Group</include>
+
+			<include>Common_Animation_Settings_Options</include>
+
+			<control type="grouplist" id="5">
+
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<onright condition="!System.GetBool(Input.EnableMouse) | !Skin.HasSetting(UseTouchInput)">9000</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+
+			</control>
+
+		</control>
+
+		<!--Scrollbar-->
+		<control type="scrollbar" id="81">
+
+			<include>Common_Settings_Scrollbar_Vertical</include>
+
+			<posx>1260</posx>
+			<posy>100</posy>
+			<height>480</height>
+
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(81)">Conditional</animation>
+
+		</control>
+
+		<!--AppBar-->
+		<include>Common_Settings_Divider</include>
+
+		<control type="grouplist" id="9000">
+
+			<include>Common_Settings_Button_Grouplist</include>
+
+			<!--Okay Button-->
+			<control type="button" id="28">
+
+				<include>Common_Settings_Control_Button</include>
+				<label>$LOCALIZE[186]</label>
+				<onup>5</onup>
+				<ondown>3</ondown>
+
+			</control>
+
+			<!--Cancel Button-->
+			<control type="button" id="29">
+
+				<include>Common_Settings_Control_Button</include>
+				<label>$LOCALIZE[222]</label>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+
+			<!--Default Button-->
+			<control type="button" id="30">
+
+				<include>Common_Settings_Control_Button</include>
+				<label>$LOCALIZE[10035]</label>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+
+		</control>
+
+		<control type="button" id="7">
+
+			<description>Default Button</description>
+			<include>Common_Settings_Button</include>
+
+		</control>
+
+		<control type="radiobutton" id="8">
+
+			<description>Default Radio Button</description>
+			<include>Common_Settings_RadioButton</include>
+
+		</control>
+
+		<control type="spincontrolex" id="9">
+
+			<description>Default Spin Control</description>
+			<include>Common_Settings_SpinButton</include>
+
+		</control>
+
+		<control type="togglebutton" id="10">
+
+			<description>Default Category Button</description>
+			<include>Common_Settings_Menu</include>
+
+		</control>
+
+		<control type="image" id="11">
+
+			<visible>false</visible>
+
+		</control>
+
+		<control type="edit" id="12">
+			<include>Common_Settings_Edit</include>
+		</control>
+		
+		<control type="sliderex" id="13">
+
+			<description>Default SliderEx Control</description>
+			<include>Common_Settings_SliderEx</include>
+
+		</control>
+
+		<control type="label" id="14">
+
+			<description>Default Label</description>
+			<include>Common_Settings_Label</include>
+
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">450</defaultcontrol>
+	
+
+	<controls>
+
+		<!--Content Area-->
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>45</posy>
+			<width>1280</width>
+			<height>480</height>
+
+			<!--Animation-->
+			<animation type="WindowOpen" reversible="true">
+				<effect type="fade" start="0" end="100" time="100"/>
+				<effect type="slide" start="0,60" end="0,0" time="400" tween="cubic" easing="out" />
+			</animation>
+
+			<animation type="WindowClose" reversible="true">
+				<effect type="fade" start="100" end="0" time="100"/>
+				<effect type="slide" start="0,0" end="0,60" time="400" tween="cubic" easing="out" />
+			</animation>
+
+			<animation type="Visible" reversible="true">
+				<effect type="fade" start="0" end="100" time="100"/>
+				<effect type="slide" start="0,60" end="0,0" time="400" tween="cubic" easing="out" />
+			</animation>
+
+			<animation type="Hidden" reversible="true">
+				<effect type="fade" start="100" end="0" time="100"/>
+				<effect type="slide" start="0,0" end="0,60" time="400" tween="cubic" easing="out" />
+			</animation>
+
+			<visible>!Window.IsVisible(DialogSelect.xml)</visible>
+
+			<control type="grouplist" id="9000">
+
+				<posx>60</posx>
+				<posy>0</posy>
+				<width>1220</width>
+				<height>600</height>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<pagecontrol>9010</pagecontrol>
+				<itemgap>60</itemgap>
+				<orientation>horizontal</orientation>
+
+				<!--All Favourites-->
+				<control type="group">
+
+					<width>1200</width>
+					<height>480</height>
+
+					<!-- <control type="label">
+							
+						<label>$LOCALIZE[1036]</label>
+						<include>Common_Section_Label</include>
+						
+					</control>-->
+
+					<control type="panel" id="450">
+
+						<width>1200</width>
+						<include>Common_Favourites_Properties</include>
+						<include>Common_Favourites_Content</include>
+
+					</control>
+
+					<!--Scrollbar-->
+					<control type="scrollbar" id="459">
+
+						<include>Common_Scrollbar_Vertical</include>
+
+						<posx>1190</posx>
+						<posy>60</posy>
+						<height>480</height>
+
+						<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(459)">Conditional</animation>
+
+					</control>
+
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

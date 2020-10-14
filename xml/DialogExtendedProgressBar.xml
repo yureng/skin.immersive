@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	
+
+	<controls>
+
+		<control type="group">
+
+			<description>Coordinates</description>
+			<posx>0</posx>
+			<posy>640</posy>
+
+			<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration) + !Window.IsVisible(weather) + !Window.IsVisible(screencalibration) + !Window.IsVisible(settings) + !Window.IsVisible(skinsettings) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(SettingsSystemInfo.xml) + !Window.IsVisible(infodialog)</visible>
+
+			<!--Use these animation if the appbar is closed-->
+			<animation type="WindowOpen" condition="!Skin.HasSetting(ShowAppBar)">
+				<effect type="slide" start="0,76" end="0,0" time="200"/>
+				<effect type="fade" start="0" end="100" time="200"/>
+			</animation>
+
+			<animation type="WindowClose" condition="!Skin.HasSetting(ShowAppBar)">
+				<effect type="slide" start="0,0" end="0,76" time="600"/>
+				<effect type="fade" start="100" end="0" time="600"/>
+			</animation>
+
+			<animation type="Visible" condition="!Skin.HasSetting(ShowAppBar)">
+				<effect type="slide" start="0,76" end="0,0" time="200"/>
+				<effect type="fade" start="0" end="100" time="200"/>
+			</animation>
+
+			<animation type="Hidden" condition="!Skin.HasSetting(ShowAppBar)">
+				<effect type="slide" start="0,0" end="0,76" time="200"/>
+				<effect type="fade" start="100" end="0" time="200"/>
+			</animation>
+
+			<!--Use these animation if the appbar is open-->
+			<animation type="WindowOpen" condition="Skin.HasSetting(ShowAppBar)">
+				<effect type="fade" start="0" end="100" time="200"/>
+			</animation>
+
+			<animation type="WindowClose" condition="Skin.HasSetting(ShowAppBar)">
+				<effect type="fade" start="100" end="0" time="600"/>
+			</animation>
+
+			<animation type="Visible" condition="Skin.HasSetting(ShowAppBar)">
+				<effect type="fade" start="0" end="100" time="200"/>
+			</animation>
+
+			<animation type="Hidden" condition="Skin.HasSetting(ShowAppBar)">
+				<effect type="fade" start="100" end="0" time="200"/>
+			</animation>
+
+			<!--Adjust the position of the window depending on the visibility of the appbar-->
+			<animation type="Conditional" condition="Skin.HasSetting(ShowAppBar)">
+				<effect type="slide" start="0,0" end="0,-116" time="190"/>
+			</animation>
+
+			<control type="image">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>80</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+
+			</control>
+
+			<control type="label" id="30">
+
+				<posx>820</posx>
+				<posy>10</posy>
+				<width>400</width>
+				<height>20</height>
+				<font>DialogDownloadProgress-Detail</font>
+				<textcolor>Label_Normal</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+
+			</control>
+
+			<control type="label" id="31">
+
+				<description>heading</description>
+				<posx>820</posx>
+				<posy>30</posy>
+				<width>400</width>
+				<height>20</height>
+				<font>DialogDownloadProgress-Detail-Small</font>
+				<textcolor>Label_Normal</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+
+			</control>
+
+			<control type="image">
+
+				<posx>820</posx>
+				<posy>56</posy>
+				<width>400</width>
+				<height>10</height>
+				<texture border="2">colors\color_grey.png</texture>
+
+			</control>
+
+			<control type="progress" id="32">
+
+				<posx>820</posx>
+				<posy>56</posy>
+				<width>400</width>
+				<height>10</height>
+				<texturebg>colors/color_transparent.png</texturebg>
+				<lefttexture></lefttexture>
+				<midtexture>colors/color_white.png</midtexture>
+				<righttexture></righttexture>
+				<colordiffuse>Background_Highlight</colordiffuse>
+
+			</control>
+
+			<control type="image">
+
+				<posx>756</posx>
+				<posy>16</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>kai\kai_downloading.png</texture>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

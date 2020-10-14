@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<defaultcontrol always="true">5</defaultcontrol>	
+
+	<animation type="WindowOpen">
+		<effect type="fade" start="0" end="100" time="400" />
+	</animation>
+
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" delay="400" />
+	</animation>
+
+	<controls>
+
+		<control type="group">
+
+			<!--Top Area-->
+			<control type="image">
+
+				<include>Common_Dimensions</include>
+				<texture>overlays/overlay_fullscreen_top.png</texture>
+
+			</control>
+
+			<include>Common_Breadcrumb_Alt</include>
+
+			<!--Information Area-->
+			<control type="group">
+
+				<posx>550</posx>
+				<posy>0</posy>
+				<width>730</width>
+				<height>680</height>
+
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="400" delay="400"/>
+					<effect type="slide" start="1280,0" end="0,0" time="800" delay="400" tween="cubic" easing="out" />
+				</animation>
+
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="400" />
+					<effect type="slide" start="0,0" end="1280,0" time="800" tween="cubic" easing="out" />
+				</animation>
+
+				<control type="image">
+
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>730</width>
+					<height>720</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>FanartDiffuse</colordiffuse>
+
+				</control>
+
+				<control type="label" id="2">
+
+					<visible>false</visible>
+
+				</control>
+
+				<control type="grouplist" id="5">
+
+					<description>Control Area</description>
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>730</width>
+					<height>540</height>
+					<itemgap>0</itemgap>
+					<orientation>vertical</orientation>					
+					<ondown>9902</ondown>
+
+				</control>
+
+				<control type="image">
+					<visible>Control.IsVisible(28)</visible>
+					<posx>0</posx>
+					<posy>600</posy>
+					<width>730</width>
+					<height>1</height>
+					<texture>colors/color_white.png</texture>
+
+				</control>
+
+				<control type="group" id="9902">
+					<posx>0</posx>
+					<posy>615</posy>
+					
+					<control type="button" id="28">
+						<description>Default Button</description>
+						<textcolor>Label_Normal</textcolor>
+						<disabledcolor>Label_Disabled</disabledcolor>
+						<include>Common_OSD_Settings_Button</include>
+						<onup>5</onup>						
+						<ondown></ondown>
+					</control>
+
+					<!--<control type="button" id="29">
+						<posy>60</posy>
+						<description>Default Button</description>
+						<textcolor>Label_Normal</textcolor>
+						<disabledcolor>Label_Disabled</disabledcolor>
+						<include>Common_OSD_Settings_Button</include>
+						<onup>28</onup>						
+					</control>-->
+				</control>				
+
+				<control type="button" id="7">
+
+					<description>Default Button</description>
+					<textcolor>Label_Normal</textcolor>
+					<disabledcolor>Label_Disabled</disabledcolor>
+					<include>Common_OSD_Settings_Button</include>
+
+				</control>
+
+				<control type="radiobutton" id="8">
+
+					<description>Default Radio Button</description>
+					<textcolor>Label_Normal</textcolor>
+					<disabledcolor>Label_Disabled</disabledcolor>
+					<include>Common_OSD_Settings_RadioButton</include>
+
+				</control>
+
+				<control type="spincontrolex" id="9">
+
+					<description>Default Spin Control</description>
+					<textcolor>Label_Normal</textcolor>
+					<disabledcolor>Label_Disabled</disabledcolor>
+					<include>Common_OSD_Settings_SpinButton</include>
+
+				</control>
+
+				<control type="image" id="11">
+
+					<visible>false</visible>
+
+				</control>
+
+				<control type="edit" id="12">
+					<include>Common_OSD_Settings_Edit</include>
+				</control>
+
+				<control type="sliderex" id="13">
+
+					<description>Default Category Button</description>
+					<textcolor>Label_Normal</textcolor>
+					<disabledcolor>Label_Disabled</disabledcolor>
+					<include>Common_OSD_Settings_SliderEx</include>
+
+				</control>
+
+				<control type="label" id="14">
+
+					<description>Default Label</description>
+					<include>Common_Settings_Label</include>
+
+				</control>
+
+			</control>
+			
+		</control>
+
+	</controls>
+
+</window>

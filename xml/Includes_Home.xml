@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="Home_NowPlaying">
+
+		<control type="group">
+
+			<width>450</width>
+			<height>440</height>
+
+			<visible>Player.HasMedia</visible>
+
+			<control type="label">
+
+				<label>$LOCALIZE[10522]</label>
+				<include>Common_Section_Label</include>
+				<visible>Player.HasVideo</visible>
+
+			</control>
+
+			<control type="label">
+
+				<label>$LOCALIZE[10517]</label>
+				<include>Common_Section_Label</include>
+				<visible>Player.HasAudio</visible>
+
+			</control>
+
+			<control type="panel" id="9005">
+
+				<posx>0</posx>
+				<posy>64</posy>
+				<width>480</width>
+				<height>280</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup></onup>
+				<ondown>9000</ondown>
+
+				<itemlayout width="472" height="262">
+
+					<control type="image">
+
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>460</width>
+						<height>250</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>Tile_Background</colordiffuse>
+
+					</control>
+
+					<control type="image">
+
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>460</width>
+						<height>250</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio aligny="center">scale</aspectratio>
+
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout width="472" height="262">
+
+					<control type="image">
+
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>472</width>
+						<height>262</height>
+						<texture border="10">colors/color_white.png</texture>
+						<colordiffuse>Background_Highlight</colordiffuse>
+						<aspectratio>scale</aspectratio>
+
+					</control>
+
+					<control type="image">
+
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>460</width>
+						<height>250</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>Tile_Background</colordiffuse>
+
+					</control>
+
+					<control type="image">
+
+						<posx>6</posx>
+						<posy>6</posy>
+						<width>460</width>
+						<height>250</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio aligny="center">scale</aspectratio>
+
+					</control>
+
+				</focusedlayout>
+
+				<content>
+
+					<item id="1">
+						<description>Now Playing</description>
+						<label></label>
+						<icon>playercontrols/playercontrol_fullscreen.png</icon>
+						<thumb>$VAR[NowPlaying_Image]</thumb>
+						<onclick>ActivateWindow(fullscreenvideo)</onclick>
+						<visible>Player.HasVideo</visible>
+					</item>
+
+					<item id="1">
+						<description>Now Playing</description>
+						<label></label>
+						<thumb>$VAR[NowPlaying_Image]</thumb>
+						<icon>playercontrols/playercontrol_fullscreen.png</icon>
+						<onclick>ActivateWindow(visualisation)</onclick>
+						<visible>Player.HasAudio</visible>
+					</item>
+
+				</content>
+
+			</control>
+
+			<control type="multiimage">
+
+				<posx>20</posx>
+				<posy>280</posy>
+				<width>24</width>
+				<height>24</height>
+				<imagepath>nowplaying/playing</imagepath>
+				<timeperimage>200</timeperimage>
+				<fadetime>200</fadetime>
+				<pauseatend>0</pauseatend>
+				<randomize>true</randomize>
+				<loop>true</loop>
+
+			</control>
+
+			<control type="grouplist">
+
+				<posx>6</posx>
+				<posy>328</posy>
+				<height>180</height>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+
+				<control type="textbox">
+
+					<width>460</width>
+					<height>40</height>
+					<label>[UPPERCASE]$VAR[NowPlaying_First_Label][/UPPERCASE]</label>
+					<textcolor>Label_Normal</textcolor>
+					<font>Fullscreen-Info-Large</font>
+					<aligny>top</aligny>
+
+				</control>
+
+				<control type="textbox">
+
+					<width>460</width>
+					<height>28</height>
+					<label>[UPPERCASE]$VAR[NowPlaying_Second_Label][/UPPERCASE]</label>
+					<textcolor>Label_Normal</textcolor>
+					<font>Fullscreen-Info-Normal</font>
+
+				</control>
+
+				<control type="label">
+
+					<width>460</width>
+					<height>28</height>
+					<label>[UPPERCASE]$VAR[NowPlaying_Third_Label][/UPPERCASE]</label>
+					<textcolor>Label_Normal</textcolor>
+					<font>Fullscreen-Info-Normal</font>
+					<aligny>top</aligny>
+
+				</control>
+
+			</control>
+
+			<!--Current Time-->
+			<control type="group">
+
+				<posx>6</posx>
+				<posy>434</posy>
+				<width>460</width>
+				<height>40</height>
+
+				<!--Progress Bar-->
+				<control type="progress">
+
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>460</width>
+					<height>5</height>
+					<texturebg border="2">colors/color_grey.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="2">colors/color_silver.png</midtexture>
+					<righttexture></righttexture>
+					<info>Player.ProgressCache</info>
+
+				</control>
+
+				<!--Progress Bar-->
+				<control type="progress">
+
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>460</width>
+					<height>5</height>
+					<texturebg border="2">colors/color_transparent.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture border="2">colors/color_white.png</midtexture>
+					<righttexture></righttexture>
+					<info>Player.Progress</info>
+					<colordiffuse>Background_Highlight</colordiffuse>
+
+				</control>
+
+				<!--Current Time-->
+				<control type="label">
+
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>40</height>
+					<label>$INFO[Player.Time]</label>
+					<textcolor>Label_Normal</textcolor>
+					<font>Fullscreen-Info-Small</font>
+					<aligny>top</aligny>
+
+				</control>
+
+				<!--Total Time-->
+				<control type="label">
+
+					<posx>460</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>40</height>
+					<label>$INFO[Player.Duration]</label>
+					<textcolor>Label_Normal</textcolor>
+					<font>Fullscreen-Info-Small</font>
+					<align>right</align>
+					<aligny>top</aligny>
+
+				</control>
+
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="Home_Custom">
+
+		<control type="group">
+
+			<visible>true</visible>
+			<include>Common_Animation_View</include>
+
+			<control type="fixedlist" id="9001">
+
+				<include>Home_Custom_Fixedlist</include>
+				<focusposition>1</focusposition>
+				<visible>!Player.HasMedia</visible>
+
+			</control>
+
+			<control type="fixedlist" id="9001">
+
+				<include>Home_Custom_Fixedlist</include>
+				<focusposition>0</focusposition>
+				<visible>Player.HasMedia</visible>
+
+			</control>
+
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9011">
+
+				<include>Common_Scrollbar_Horizontal</include>
+				<posy>500</posy>
+				<visible>System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)</visible>
+
+				<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Container(9001).Scrolling">Conditional</animation>
+
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="Home_Custom_Fixedlist">
+
+		<posy>20</posy>
+		<width>1500</width>
+		<height>520</height>
+		<onleft condition="Control.IsVisible(9005)">9005</onleft>
+		<onright></onright>
+		<onup></onup>
+		<ondown>9000</ondown>
+		<viewtype label="Extended">wrap</viewtype>
+		<orientation>horizontal</orientation>
+		<pagecontrol>9011</pagecontrol>
+		<preloaditems>2</preloaditems>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+
+		<include>Common_Animation_HideWhenScrolling</include>
+
+		<itemlayout width="340" height="440">
+
+			<control type="group">
+
+				<posx>35</posx>
+				<posy>35</posy>
+				<width>320</width>
+				<height>440</height>
+
+				<control type="image">
+					<visible>!Player.HasMedia</visible>
+					<posx>-35</posx>
+					<posy>-35</posy>
+					<width>340</width>
+					<height>470</height>
+					<texture>shadow.png</texture>
+				</control>
+				
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>370</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Settings_Background_Dark</colordiffuse>
+
+				</control>
+
+				<control type="label">
+					<posx>13</posx>
+					<posy>293</posy>
+					<width>260</width>
+					<height>36</height>
+					<label>$INFO[listitem.label]</label>
+					<font>Menu-ExtendedList-Header</font>
+					<textcolor>Settings_Label</textcolor>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				<control type="textbox">
+					<posx>13</posx>
+					<posy>330</posy>
+					<width>250</width>
+					<height>38</height>
+					<label>$INFO[listitem.label2]</label>
+					<font>DialogInfo-Label-Small</font>
+					<textcolor>Settings_Label</textcolor>
+					<aligny>top</aligny>
+				</control>
+
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Settings_Background_Light</colordiffuse>
+				</control>
+
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[listitem.Thumb]</texture>
+					<aspectratio aligny="top">center</aspectratio>
+				</control>
+
+			</control>
+
+		</itemlayout>
+
+		<focusedlayout width="340" height="440">
+
+			<control type="group">
+
+				<posx>35</posx>
+				<posy>35</posy>
+				<width>320</width>
+				<height>440</height>
+
+				<control type="image">
+					<visible>!Player.HasMedia</visible>
+					<posx>-35</posx>
+					<posy>-35</posy>
+					<width>340</width>
+					<height>470</height>
+					<texture>shadow.png</texture>
+				</control>
+
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>370</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Label_Highlight</colordiffuse>
+					<visible>Control.HasFocus(9001)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>370</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Settings_Background_Dark</colordiffuse>
+					<visible>!Control.HasFocus(9001)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>13</posx>
+					<posy>293</posy>
+					<width>260</width>
+					<height>36</height>
+					<label>$INFO[listitem.label]</label>
+					<font>Menu-ExtendedList-Header</font>
+					<textcolor>Settings_Label</textcolor>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				<control type="textbox">
+					<posx>13</posx>
+					<posy>330</posy>
+					<width>250</width>
+					<height>38</height>
+					<label>$INFO[listitem.label2]</label>
+					<font>DialogInfo-Label-Small</font>
+					<textcolor>Settings_Label</textcolor>
+					<aligny>top</aligny>
+				</control>
+
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Settings_Background_Light</colordiffuse>
+				</control>
+
+				<control type="image">
+					<posx>-1</posx>
+					<posy>14</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[listitem.Thumb]</texture>
+					<aspectratio aligny="top">center</aspectratio>
+				</control>
+
+			</control>
+
+		</focusedlayout>
+
+		<!-- <content target="videos" >addons://sources/video</content>	-->	
+		<content>
+
+			<!-- Video Addons -->
+			<item id="1">
+				<description>Video Addons</description>
+				<label>$LOCALIZE[40003]</label>
+				<label2>通过已安装的视频插件，播放来自 Internet 网络媒体站点提供的视频节目。</label2>
+				<thumb>home/home_web.png</thumb>
+				<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
+				<visible>false</visible>
+			</item>
+			
+			<!-- YouTube -->
+			<item id="2">
+				<description>YouTube Addon</description>
+				<label>YouTube</label>
+				<label2>「Youtube」是全世界最大的影片分享网站</label2>
+				<thumb>home/home_youtube.png</thumb>
+				<!--thumb>$INFO[System.AddonIcon(plugin.video.youtube)]</thumb-->
+				<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/,return)</onclick>
+				<visible>!String.IsEmpty(System.AddonVersion(plugin.video.youtube))</visible>
+			</item>
+
+			<!-- Video Files -->
+			<item id="3">
+				<description>Video Files</description>
+				<label>$LOCALIZE[3]</label>
+				<label2>播放本机视频文件。或者通过家庭网络，播放其他设备上共享的视频。</label2>
+				<thumb>home/home_video.png</thumb>
+				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
+				<visible>true</visible>
+			</item>
+
+			<item id="4">
+				<description>Pictures</description>
+				<label>$LOCALIZE[1]</label>
+				<label2>查看 Internet、家庭网络中共享的图像和照片。</label2>
+				<thumb>home/home_pictures.png</thumb>
+				<onclick>ActivateWindow(pictures,all,return)</onclick>
+				<!-- <onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick> -->
+				<visible>true</visible>
+			</item>
+
+			<item id="5">
+				<description>Music</description>
+				<label>$LOCALIZE[2]</label>
+				<label2>收听 Internet 网络媒体音频流，播放家庭网络（例如：NAS）中的音乐。</label2>
+				<thumb>home/home_music.png</thumb>
+				<onclick>ActivateWindow(music,all,return)</onclick>
+				<visible>true</visible>
+			</item>
+
+			<!-- Programs 1 -->
+			<item id="6">
+				<description>Programs</description>
+				<label>$LOCALIZE[0]</label>
+				<label2>$LOCALIZE[1043]</label2>
+				<thumb>home/home_apps.png</thumb>
+				<onclick>ActivateWindow(programs,addons://sources/executable/,return)</onclick>
+				<visible>!System.Platform.Android</visible>
+			</item>
+
+			<!-- Programs 2 -->
+			<item id="7">
+				<description>Programs</description>
+				<label>Apps</label>
+				<label2>$LOCALIZE[20244]</label2>
+				<thumb>home/home_apps.png</thumb>
+				<onclick>ActivateWindow(programs,androidapps,return)</onclick>
+				<visible>System.Platform.Android</visible>
+			</item>
+
+			<!-- Weather -->
+			<item id="8">
+				<description>Weather</description>
+				<label>$LOCALIZE[8]</label>
+				<!-- <label>$INFO[Window(Weather).Property(Current.Condition)] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label> -->
+				<label2>$LOCALIZE[33030]:[CR][CR]$INFO[Window(Weather).Property(Day0.Outlook)][CR]$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</label2>
+				<thumb>home/home_weather.png</thumb>
+				<!-- <icon>home/weather/$INFO[Window(Weather).Property(Current.FanartCode)].png</icon> -->
+				<!-- <thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]/default.jpg</thumb> -->
+				<onclick>ActivateWindow(weather,return)</onclick>
+				<visible>!String.IsEmpty(Weather.Plugin)</visible>
+			</item>
+
+		</content>
+
+	</include>
+
+</includes>

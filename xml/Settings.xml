@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<include>Common_Window</include>
+
+	<defaultcontrol always="true">9000</defaultcontrol>
+	
+
+	<controls>
+
+		<control type="group">
+
+			<include>Common_Settings_Background</include>
+
+			<!--Menu-->
+			<control type="group">
+
+				<include>Common_Settings_Header_Back</include>
+
+				<control type="label">
+
+					<include>Common_Settings_Header</include>
+					<label>$LOCALIZE[5]</label>
+
+				</control>
+
+				<control type="grouplist" id="9000">
+
+					<description>grouplist for context buttons</description>
+					<posx>0</posx>
+					<posy>100</posy>
+					<width>420</width>
+					<height max="600">auto</height>
+					<itemgap>0</itemgap>
+
+					<control type="button" id="9003">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[14200]</label>
+						<onclick>activatewindow(PlayerSettings)</onclick>
+
+					</control>
+
+					<control type="button" id="9004">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[14211]</label>
+						<onclick>activatewindow(MediaSettings)</onclick>
+
+					</control>
+
+					<!-- <control type="button" id="9005">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[14204]</label>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+
+					</control> -->
+
+					<control type="button" id="9006">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[14036]</label>
+						<onclick>activatewindow(ServiceSettings)</onclick>
+
+					</control>
+
+					<control type="button" id="9007">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[14206]</label>
+						<onclick>activatewindow(InterfaceSettings)</onclick>
+
+					</control>
+					
+					<control type="button" id="9008">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[13000]</label>
+						<onclick>activatewindow(SystemSettings)</onclick>
+
+					</control>
+
+					<control type="button" id="9009">
+
+						<include>Common_Settings_Menu</include>
+						<label>$LOCALIZE[13200]</label>
+						<onclick>activatewindow(Profiles)</onclick>
+
+					</control>
+
+				</control>
+
+			</control>
+
+			<control type="image">
+				<posx>360</posx>
+				<posy>0</posy>
+				<width>auto</width>
+				<height>auto</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">personalization\personalization_mountains.png</texture>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>
