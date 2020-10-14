@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.immersive" version="18.1.2" name="Immersive" provider-name="Leia18, Xiaojun.Zhu">
+<addon id="skin.immersive" version="18.1.2" name="Immersive" provider-name="Leia18, Yureng">
 
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>	
@@ -11,7 +11,7 @@
 	
 	<extension point="xbmc.addon.metadata">	
 		<platform>all</platform>
-		<summary>Created by Leia18 Designs, Modify by Xiaojun.Zhu</summary>
+		<summary>Created by Leia18 Designs, Modify by Yureng</summary>
 		<description>Immersive combines the elegant simplicity of Microsoft's Metro UI with the media richness of XBMC to create an extremely user-friendly and inviting skin.</description>
 		<disclaimer>This skin is a work-in-progress. Bugs are expected to occur.</disclaimer>	
 	</extension>
